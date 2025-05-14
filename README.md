@@ -1,6 +1,6 @@
 # Rotary Positional Embeddings (RoPE)
 
-A pytorch implementation of RoPE [1]. The code is modified from [2].
+A pytorch implementation of RoPE. The code is modified from [1].
 
 ## Usage
 
@@ -20,12 +20,21 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 
 ## Visualization of rope:
 
-<img src="https://github.com/user-attachments/assets/99c28921-267d-477b-8785-de6a5afa3079" width="600">
+![RoPE matrix](./assets/rope.png)
 
 ## References
 
-[1] Su, J., Zhang, H., Li, X., Zhang, J. and Li, Y.R., August. Enhanced transformer with rotary position embedding. ACL-IJCNLP, 2021.
+```bibtex
+@misc{su2021roformer,
+    title   = {RoFormer: Enhanced Transformer with Rotary Position Embedding}, 
+    author  = {Jianlin Su and Yu Lu and Shengfeng Pan and Bo Wen and Yunfeng Liu},
+    year    = {2021},
+    eprint  = {2104.09864},
+    archivePrefix = {arXiv},
+    primaryClass = {cs.CL}
+}
+```
 
-## External Links
+External Links
 
-[2] https://github.com/Lightning-AI/lit-llama/blob/main/lit_llama/model.py
+[1] https://github.com/Lightning-AI/lit-llama/blob/main/lit_llama/model.py
