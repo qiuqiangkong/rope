@@ -19,7 +19,8 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 ```
 
 ## Visualization of rope:
-[rope.pdf](https://github.com/user-attachments/files/20211393/rope.pdf)
+
+![rope](https://github.com/user-attachments/assets/99c28921-267d-477b-8785-de6a5afa3079)
 
 ## References
 
