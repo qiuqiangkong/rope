@@ -1,6 +1,6 @@
 # Rotary Positional Embeddings (RoPE)
 
-A pytorch implementation of RoPE [1]. The code is modified and simplified from [2].
+A pytorch implementation of RoPE [1]. The code is modified from [2].
 
 ## Usage
 
@@ -24,9 +24,7 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 
 ## References
 
-```bibtex
 [1] Su, J., Zhang, H., Li, X., Zhang, J. and Li, Y.R., August. Enhanced transformer with rotary position embedding. ACL-IJCNLP, 2021.
-```
 
 External Links
 
