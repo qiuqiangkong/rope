@@ -20,7 +20,7 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 
 ## Visualization of rope:
 
-![rope](https://github.com/user-attachments/assets/99c28921-267d-477b-8785-de6a5afa3079)
+<img src="https://github.com/user-attachments/assets/99c28921-267d-477b-8785-de6a5afa3079" width="600">
 
 ## References
 
