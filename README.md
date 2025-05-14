@@ -20,7 +20,7 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 
 ## Visualization of rope:
 
-![RoPE matrix](./assets/rope.png)
+<img src="https://github.com/user-attachments/assets/99c28921-267d-477b-8785-de6a5afa3079" width="600">
 
 ## References
 
@@ -35,6 +35,6 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 }
 ```
 
-External Links
+## External Links
 
 [1] https://github.com/Lightning-AI/lit-llama/blob/main/lit_llama/model.py
