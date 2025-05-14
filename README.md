@@ -19,8 +19,7 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 ```
 
 ## Visualization of rope:
-
-![RoPE matrix](./assets/rope.png)
+[rope.pdf](https://github.com/user-attachments/files/20211393/rope.pdf)
 
 ## References
 
