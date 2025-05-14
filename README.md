@@ -26,6 +26,6 @@ out = apply_rope(x, rope)  # (b, t, n, h)
 
 [1] Su, J., Zhang, H., Li, X., Zhang, J. and Li, Y.R., August. Enhanced transformer with rotary position embedding. ACL-IJCNLP, 2021.
 
-External Links
+## External Links
 
 [2] https://github.com/Lightning-AI/lit-llama/blob/main/lit_llama/model.py
