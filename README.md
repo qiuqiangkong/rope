@@ -4,18 +4,46 @@ A pytorch implementation of RoPE. The code is modified from [1].
 
 ## Usage
 
+Example 1: RoPE (1D)
+
 ```python
 B = 4  # batch_size
-T = 100  # time_steps
-N = 16  # heads_num
-H = 32  # head_dim
-L = 1000  # rope_len
+L = 100  # time_steps
+N = 8  # heads_num
+H = 24  # head_dim
 
-rope = build_rope(seq_len=L, head_dim=H)  # (l, h/2, 2)
-x = torch.Tensor(B, T, N, H)  # (b, t, n, h)
+rope = RoPE(head_dim=H)
+x = torch.rand((B, L, N, H))  # (b, l, n, h)
+out = rope(x)  # (b, l, n, h)
+```
 
-# Apply RoPE
-out = apply_rope(x, rope)  # (b, t, n, h)
+Example 2: RoPE (1D) with sparse positions
+
+```python
+rope = RoPE(head_dim=H)
+x = torch.rand((B, 4, N, H))  # (b, l, n, h)
+pos = torch.LongTensor([[0], [3], [7], [8]])  # (l, 1)
+out = rope.apply_nd(x, pos)  # (b, l, n, h)
+```
+
+Example 3: RoPE (2D image) with sparse positions
+
+```python
+data_dim = 2
+rope = RoPE(head_dim=H // data_dim)
+x = torch.rand((B, 4, N, H))
+pos = torch.LongTensor([[0, 0], [0, 1], [1, 0], [1, 1]])
+out = rope.apply_nd(x, pos)  # (b, l, n, h)
+```
+
+Example 4: RoPE (3D video) with sparse positions
+
+```python
+data_dim = 3
+rope = RoPE(head_dim=H // data_dim)
+x = torch.rand((B, 4, N, H))
+pos = torch.LongTensor([[0, 0, 0], [1, 3, 4], [2, 2, 2], [5, 4, 3]])
+out3 = rope.apply_nd(x, pos)  # (b, l, n, h)
 ```
 
 ## Visualization of rope:
