@@ -7,10 +7,10 @@ A pytorch implementation of RoPE. The code is modified from [1].
 Example 1: RoPE (1D)
 
 ```python
-B = 4  # batch_size
-L = 100  # time_steps
-N = 8  # heads_num
-H = 24  # head_dim
+B = 4  # batch_size (b)
+L = 100  # seq_len (l)
+N = 8  # heads_num (n)
+H = 24  # head_dim (h)
 
 rope = RoPE(head_dim=H)
 x = torch.rand((B, L, N, H))
